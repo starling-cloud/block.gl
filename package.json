@@ -1,0 +1,32 @@
+{
+    "name": "block.gl",
+    "description": "Browser Blockchain",
+    "author": "Block Foundation",
+    "license": "Apache-2.0",
+    "version": "0.0.1",
+    "keywords": [
+        "blockfoundation",
+        "blockgl",
+        "webgl",
+        "blockchain"
+    ],
+    "homepage": "https://block.gl",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/geoid-org/block.gl.git"
+    },
+    "bugs": {
+        "url": "https://github.com/geoid-org/block.gl/issues"
+    },
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "typescript": "^5.1.6"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
