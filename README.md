@@ -13,3 +13,7 @@
 ``` bash
 npm i block.gl
 ```
+
+## Links
+
+- [NPM](https://www.npmjs.com/package/block.gl)
