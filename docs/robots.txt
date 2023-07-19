@@ -5,4 +5,4 @@ User-agent: *
 Disallow:
 
 
-SITEMAP: http://www.lib.gg/sitemap.xml
+SITEMAP: http://www.block.gl/sitemap.xml
