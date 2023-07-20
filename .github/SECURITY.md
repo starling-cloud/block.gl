@@ -1,3 +1,3 @@
 # Security Policy
 
-To report a security vulnerabilities, please email [info@geoid.org](mailto:info@geoid.org).
+To report a security vulnerabilities, please email [info@blockfoundation.io](mailto:info@blockfoundation.io).
