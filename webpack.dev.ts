@@ -26,7 +26,6 @@ const configDevelopment: any = {
         new webpack.HotModuleReplacementPlugin()
     ]
 
-
 };
 
 export default configDevelopment
