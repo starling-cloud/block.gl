@@ -13,7 +13,7 @@ const configPaths: any = {
 
     public: path.resolve(__dirname, '/public'),
 
-    lib: path.resolve(__dirname, '/lib'),
+    lib: path.resolve(__dirname, './lib'),
 
     entryPoint: path.resolve(__dirname, 'src/lib/index.ts'),
     // entryPoint: path.resolve(__dirname, 'src/index.ts'),
