@@ -1,8 +1,8 @@
 # Canonical
-Canonical: https://www.block.gl/security.txt
+Canonical: https://www.loop.gl/security.txt
 
 # Contact
-Contact: mailto:info@blockfoundation.io
+Contact: mailto:info@geoid.org
 
 # Preferred-Languages
 Preferred-Languages: en
