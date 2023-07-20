@@ -16,18 +16,7 @@ const configCommon: any = {
     //     paths.src + '/index.ts'
     // ],
 
-    module: {
-        rules: [
-            {
-                test: /\.ts$/,
-                use: [{ loader: 'ts-loader' }],
-                exclude: /node_modules/,
-            },
-        ],
-    },
-
-
-    // resolve: {
+        // resolve: {
     //     modules: [paths.src, 'node_modules'],
     //     extensions: [
     //         '.ts', '.tsx',
@@ -40,6 +29,24 @@ const configCommon: any = {
     //         assets: paths.public,
     //     },
     // },
+
+    module: {
+        rules: [
+            {
+                test: /\.ts$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+                options: {
+                    reportFiles: [
+                        'src/**/*.{ts,tsx}',
+                        '!src/tmp/**/*.{ts,tsx}'
+                    ]
+                }
+            },
+        ],
+    },
+
+
 
 
     // output: {
