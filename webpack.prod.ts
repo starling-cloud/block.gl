@@ -4,6 +4,13 @@
 
 import paths from './webpack.paths';
 
+import path from 'path'
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
@@ -29,7 +36,9 @@ const configProduction: any = {
         library: 'block.gl',
         libraryTarget: 'umd',
         libraryExport: 'default',
+        // path: path.resolve(__dirname, "./lib/"),
         path: paths.lib,
+        // path: "/lib",
         filename: '[name].js',
         umdNamedDefine: true
     },
