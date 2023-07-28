@@ -17,12 +17,15 @@
 
 /**
  * Block Interface
- * @static
- * @memberof
- * @class
- * @description
- * @param
- * @returns
+ * @interface BlockInterface
+ * @description This interface declares the structure of a Block in a Blockchain. It includes properties like index, timestamp, data, lastHash, hash, nonce, and a method to convert the block to a string.
+ * @property {number} index - The position of the block within the blockchain.
+ * @property {number} timestamp - The timestamp indicating when the block was created.
+ * @property {any} data - The data to be stored in the block. It could be transactions or any generic data.
+ * @property {string} lastHash - The hash of the previous block in the chain.
+ * @property {string} hash - The hash of the current block.
+ * @property {number} nonce - The nonce value used in the process of mining new blocks.
+ * @method toString - A method to convert the block data to a string.
  * @example
  * @see
  */
