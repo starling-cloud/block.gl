@@ -21,16 +21,16 @@ import TransactionInput from "./transaction-input";
 
 /**
  * Block Class
+ * @class Block
  * @memberof blockchain
- * @class
- * @description
- * @param timestamp timestamp
- * @param lastHash hash of the previous block
- * @param hash current hash (based on the timestamp, hash of previous block and transactions)
- * @param data data to store (cryptocurrency transactions but can store generic data, as well)
- * @param nonce nonce value (for mining new blocks)
- * @param difficulty difficulty value (for mining new blocks)
- * @returns
+ * @description This class represents a Block in a Blockchain. Each block contains important information like timestamp, hash of the previous block, current hash, data to be stored, and values needed for mining new blocks (nonce and difficulty).
+ * @param {number} timestamp    - The timestamp indicating when the block was created.
+ * @param {string} lastHash     - The hash of the previous block in the chain.
+ * @param {string} hash         - The hash of the current block, which is based on the timestamp, the lastHash, and the transactions.
+ * @param {Object} data         - The data to be stored in the block. While this is often cryptocurrency transactions, it can be generic data as well.
+ * @param {number} nonce        - The nonce value used in the process of mining new blocks.
+ * @param {number} difficulty    - The difficulty value that indicates the complexity of the cryptographic challenge in mining new blocks.
+ * @returns {Block} A new Block instance.
  * @example
  * @see
  */
