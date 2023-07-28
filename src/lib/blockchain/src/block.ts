@@ -105,7 +105,13 @@ export default class Block {
         return new this(timestamp, lastHash, hash, data, nonce, difficulty)
     }
 
-    static generateHash(timestamp: number, lastHash: string, data: any, nonce: number, difficulty: number): string {
+    static generateHash(
+        timestamp: number,
+        lastHash: string,
+        data: any,
+        nonce: number,
+        difficulty: number
+    ): string {
             return ChainUtil.genHash(`${timestamp}${lastHash}${data}${nonce}${difficulty}`);
     }
 
