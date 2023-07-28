@@ -1,0 +1,14 @@
+{
+    "extends": "../../tsconfig.module.json",
+    "include": ["src/**/*", "../../tmp/account.test.ts", "../network/src/node_miner.ts", "../network/src/p2p-server.ts", "config.ts"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "composite": true,
+        "rootDir": "src",
+        "esModuleInterop": true,
+        "outDir": "typed"
+    },
+    "references": [
+        {"path": "../core"}
+    ]
+}
