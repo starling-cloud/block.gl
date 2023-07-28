@@ -1,0 +1,14 @@
+{
+    "extends": "../../tsconfig.module.json",
+    "include": ["src/**/*", "../../tmp/account.test.ts", "config.ts"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "composite": true,
+        "rootDir": "src",
+        "esModuleInterop": true,
+        "outDir": "typed"
+    },
+    "references": [
+        {"path": "../core"}
+    ]
+}
