@@ -17,53 +17,56 @@ import Block from "./block";
 
 
 /**
- * Block Class
+ * Blockchain Class
+ * @class Blockchain
  * @memberof blockchain
- * @class
- * @description
- * @param chain array of blocks
- * @returns
+ * @description A class that represents a Blockchain which is an array of Blocks.
+ * @property {Block[]} chain - The array of blocks forming the blockchain.
  * @example
  * @see
  */
 export default class Blockchain {
     
-    public chain: Block [];
+    public chain: Block[];
 
+    /**
+     * @constructor
+     * @description Constructs a new Blockchain with a genesis block at creation.
+     */
     constructor() {
         this.chain = [Block.getGenesisBlock()];
     }
 
     /**
-     * Adds new block to blockchain.
-     * 
-     * @param data Data of the new block
-     * @returns Newest block added to blockchain
+     * addBlock Method
+     * @method addBlock
+     * @description Adds a new block to the blockchain.
+     * @param {any} data - The data to be included in the new block.
+     * @returns {Block} The newly added block.
      */
     addBlock(data: any): Block {
         const newBlock = Block.mineNewBlock(this.chain[this.chain.length-1], data);
         this.chain.push(newBlock);
-
         return newBlock;
     }
 
     /**
-     * Validates the chain by checking if:
-     * - every element's last hash value matches previous block's hash
-     * - data has been tampered with (which will produce a different hash value)
-     * - genesis block's hash values match
-     * @param blocks 
+     * isValidChain Method
+     * @method isValidChain
+     * @description Validates the blockchain by checking the hash values of each block and the integrity of the genesis block.
+     * @param {Block[]} blocks - The array of blocks forming the blockchain to be validated.
+     * @returns {boolean} The validity of the blockchain.
      */
-    isValidChain(blocks: Block []): boolean {
+    isValidChain(blocks: Block[]): boolean {
         if(JSON.stringify(blocks[0]) !== JSON.stringify(Block.getGenesisBlock())) {
             return false;
         }
 
-        for(let i:number=1; i<blocks.length; i++) {
+        for(let i: number = 1; i < blocks.length; i++) {
             const currentBlock: Block = blocks[i];
             const previousBlock: Block = blocks[i-1];
             if(currentBlock.lastHash !== previousBlock.hash ||
-               currentBlock.hash     !== Block.generateHash2(currentBlock)) {
+               currentBlock.hash !== Block.generateHash2(currentBlock)) {
                 return false;
             }
         }
@@ -71,12 +74,13 @@ export default class Blockchain {
     }
 
     /**
-     * @param newBlocks The new blockchain that is a candidate for replacing the current blockchain.
-     * @returns True if blockchain was replaced, false otherwise.
+     * replaceChain Method
+     * @method replaceChain
+     * @description Replaces the current blockchain with a new one if the new one is longer and valid.
+     * @param {Block[]} newBlocks - The new array of blocks to replace the current blockchain.
+     * @returns {boolean} Whether the blockchain was replaced or not.
      */
-    replaceChain(
-        newBlocks: Block []
-    ): boolean {
+    replaceChain(newBlocks: Block[]): boolean {
         if(newBlocks.length <= this.chain.length) {
             console.log("New chain is not longer than current chain - NOT replacing.")
             return false;
@@ -90,3 +94,4 @@ export default class Blockchain {
         return true;
     }
 }
+
