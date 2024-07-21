@@ -13,7 +13,7 @@ dev_addr: 127.0.0.1:8888
 
 # Copyright
 copyright: >
-  Copyright &copy; 2023 <a href="https://www.blockfoundation.io">Block Foundation</a>. All Rights Reserved.
+  Copyright &copy; 2024 <a href="https://www.blockfoundation.io">Block Foundation</a>. All Rights Reserved.
 
 # hide:
 #   - footer
@@ -97,7 +97,7 @@ extra:
   generator: false
   analytics:
     provider: google
-    property: G-4BL8PBF0ND
+    property: G-NS9CMXGZE7
   social:
     - icon: fontawesome/solid/globe 
       link: https://www.blockfoundation.io
@@ -125,7 +125,7 @@ extra_css:
   - assets/style/extra.css
 extra_javascript:
   - assets/script/extra.js
-extra_templates:
+# extra_templates:
 
 
 # Extensions
@@ -169,26 +169,21 @@ markdown_extensions:
   # - pymdownx.tilde
 
 
-# Page tree
+
+# Page Tree
+# =============================================================================
+
 nav:
   - Introduction: 'index.md'
   - Quick Start: 'quick_start.md'
-  - Guide:
-      - 'Template': 'guide/template.md'
-      - 'Fields': 'guide/fields.md'
+  - Specifications:
+      - 'Overview': 'specifications/index.md'
+      - 'Features': 'specifications/features.md'
   - Resources:
-      - 'FAQ': 'resources/faq.md'
       - 'Glossary': 'resources/glossary.md'
-      - 'TXT Files': 'resources/txt_files.md'
-      - 'References': 'resources/references.md'
       - 'Links': 'resources/links.md'
   - About:
-      - 'Background': 'about/background.md'
       - 'Authors': 'about/authors.md'
-      - 'Contact': 'about/contact.md'
-  - Development:
-      - 'Contributing': 'development/contributing.md'
-      - 'Code of Conduct': 'development/code_of_conduct.md'
   - Legal Information:
       - 'License': 'legal/license.md'
       - 'Privacy Policy': 'legal/privacy_policy.md'
