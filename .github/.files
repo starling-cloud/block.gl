@@ -1,0 +1,19 @@
+.github/
+├── CODEOWNERS
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── FUNDING.yml
+├── ISSUE_TEMPLATE/
+│   ├── bug_report.md
+│   ├── feature_request.md
+│   └── custom_template.md
+├── PULL_REQUEST_TEMPLATE/
+│   └── pull_request_template.md
+├── SECURITY.md
+├── SUPPORT.md
+├── workflows/
+│   └── ci.yml
+├── dependabot.yml
+├── GOVERNANCE.md
+├── README_TEMPLATE.md
+└── LICENSE.md
